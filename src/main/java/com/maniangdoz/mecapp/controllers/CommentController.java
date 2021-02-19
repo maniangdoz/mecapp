@@ -96,7 +96,7 @@ public class CommentController {
 	public boolean addComment(@RequestBody Comm comment, 
 			@PathVariable("id") long id) throws InterruptedException, ExecutionException {
 		boolean result = false;
-		String idDoc = "";
+		String idDoc = "nothing";
 		CollectionReference ref = db.getFirebase().collection("publication");
 		Publication value = new Publication();
 		ApiFuture<QuerySnapshot> query = ref.get();
